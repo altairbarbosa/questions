@@ -6,6 +6,7 @@ Plataforma completa para gerenciamento de perguntas e respostas construída com 
 
 O projeto segue uma arquitetura modular com separação clara de responsabilidades:
 
+```
 questions/
 ├── backend/               # API Node.js (Express + Sequelize)
 │   ├── src/
@@ -30,6 +31,7 @@ questions/
 │
 ├── docker-compose.yml     # Orquestração dos containers
 └── README.md              # Documentação
+```
 
 🚀 Como Executar o Projeto
 
@@ -42,12 +44,16 @@ Node.js (18+) e npm (9+) - apenas para desenvolvimento local
 
 Clone o repositório:
 
+```
 git clone https://github.com/altairbarbosa/questions.git
 cd questions
+```
 
 Inicie os containers:
 
+```
 docker-compose up --build
+```
 
 Acesse:
 
@@ -59,28 +65,37 @@ API Backend: http://localhost:3001/api/questions
 
 Backend
 
+```
 cd backend
 npm install
 npm run dev  # Executa em modo desenvolvimento com nodemon
+```
 
 Frontend
 
+```
 cd frontend
 npm install
 npm start  # Inicia em http://localhost:3000
+```
 
 🌐 Endpoints da API
 
 Método	Endpoint	Descrição
+
+```
 GET	/api/questions	Lista todas as perguntas
 POST	/api/questions	Cria uma nova pergunta
 GET	/api/questions/:id	Obtém detalhes de uma pergunta
+```
 
 Exemplo de requisição:
 
+```
 curl -X POST -H "Content-Type: application/json" \
 -d '{"title":"Como usar Docker?","content":"Quero aprender Docker..."}' \
 http://localhost:3001/api/questions
+```
 
 🐛 Solução de Problemas
 
